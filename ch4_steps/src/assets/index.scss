@@ -1,0 +1,98 @@
+/* CSS RESET */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 10 / 16 * 100 = 62.5
+}
+
+body {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* BODY TEXT STYLE */
+
+body {
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+/* COLORS */
+
+$color-light-grey: #eee;
+$color-dark-grey: #ccc;
+
+.steps {
+    background-color: $color-light-grey;
+    width: 50%;
+    margin: 5rem auto;
+    padding: 2rem;
+
+    &__numbers {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+
+        >div {
+            font-size: 2rem;
+            padding: 1.5rem 2.5rem;
+            border-radius: 50%;
+            background-color: $color-dark-grey;
+
+            &.active {
+                background-color: #7950f2;
+                color: #fff;
+            }
+        }
+
+    }
+
+}
+
+.message {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20rem;
+
+    >button {
+        border: none;
+        border-radius: 2rem;
+        padding: 1.5rem 2.5rem;
+    }
+
+    >button:hover {
+        background-color: darkblue;
+    }
+}
+
+.close {
+    border: none;
+    font-size: 5rem;
+    background: transparent;
+    // position: absolute;
+    top: 0vw;
+    left: 75vw;
+}

@@ -156,3 +156,78 @@ function Component() {
 React is one-way data flow
 
 Data only can be passed from Parent to Child (not opposite way)
+
+### RULES OF JSX
+
+JSX -> HTML (but in "JavaScript mode")
+
+JavaScript mode :
+
+1. Can place Javascript expression: reference variables, create arrays or objects, [].map(), ternary operator
+2. Statements are not allowed (if/else, for, switch)
+
+JSX produce a Javascript expression
+
+```javascript
+const el = <h1>Hello React!</h1>;
+const el = React.createElement("h1", null, "Hello React!");
+```
+
+1. We can place other pieces of JSX inside {}
+2. We can write JSX anywhere inside a component (in if/else, assign to variable, pass it to functions, etc)
+
+JSX only return **one root element**. if return more than one needs React.Fragment
+
+## What is STATE?
+
+Data in the component which **can hold over time**
+
+Needs to **REMEMBER** throughout the app lifecyle.
+
+Its Component Memory and user can easily change this value
+
+For example: on notification will count down after clicked or on tab will become active after clicked
+
+State variable (a piece of state) : a single variable in a component
+
+State allows Developers to :
+
+1. Updating state triggers React to re-render the component on UI
+
+"Keep Sync between Data and UI" - We change the state, we change the UI
+
+2. Persist local variables between multiple renders or re-render
+
+## React Mechanics
+
+In React, a view is updated by re-rendering the component if underlying data is changes.
+
+What is re-rendering the component?
+
+Basically, destroy existing ui of component and replace the new ui of component.
+
+1. React is declarative, not imperative (nevert touch DOM) - don't do direct DOM manipulation
+
+If state updated ----automatically----> do render / re-render
+
+To **update view** need to **update state**
+
+REACT - is REACTS to state changes by re-rendering the ui
+
+## One Component, One state
+
+A state is isolated within a component
+
+UI = f(state)
+
+Change State over Time
+Change UI over Time
+
+reflection (by using state, event handlers, and JSX) of data changing over time
+
+### Practical Guideline
+
+1. Use a state variable for any data that the component should keep track ("remember") over time. Data that will **change** at some point
+2. Something in the component to be **dynamic**
+3. View as reflection of state changing over time (update state - using event handlers change view)
+4. Don't use state for data should not trigger component re-renders. Use regular variable instead.

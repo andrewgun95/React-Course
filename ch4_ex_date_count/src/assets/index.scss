@@ -1,0 +1,80 @@
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 10 / 16 * 100 = 62.5
+}
+
+body {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* BODY TEXT STYLE */
+
+body {
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+.container {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.step {
+    text-align: center;
+
+    &__button {
+        border: none;
+        padding: 1rem 1.5rem;
+        font-size: 3rem;
+    }
+
+    >span {
+        display: inline-block;
+        font-size: 2.5rem;
+        padding: 1rem;
+        width: 15rem;
+    }
+
+}
+
+.count {
+    text-align: center;
+
+    &__button {
+        border: none;
+        padding: 1rem 1.5rem;
+        font-size: 3rem;
+    }
+
+    >span {
+        display: inline-block;
+        font-size: 2.5rem;
+        width: 15rem;
+        padding: 1rem;
+    }
+}
+
+.message {
+    font-size: 3rem;
+    text-align: center;
+}
